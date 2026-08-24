@@ -48,8 +48,7 @@ export const contact: ContactInfo = {
   heading: "Let's build something together",
   subheading:
     "Have a pipeline problem or an outbound system that needs building? I'd love to hear about it.",
-  // PLACEHOLDER: replace with the real LinkedIn URL.
-  linkedinUrl: "https://linkedin.com/in/your-handle",
+  linkedinUrl: "https://www.linkedin.com/in/zahra-azam-7xgtm/",
   // PLACEHOLDER: replace with the real email address.
   email: "your-email@example.com",
   availabilityNote:
