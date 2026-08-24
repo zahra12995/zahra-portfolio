@@ -1,4 +1,5 @@
 import {
+  Bot,
   Cog,
   Code2,
   Crosshair,
@@ -20,6 +21,7 @@ import {
 // Explicit map (not a `lucide-react` namespace import) so only the icons the
 // data files reference end up in the bundle.
 const ICONS: Record<string, LucideIcon> = {
+  Bot,
   Cog,
   Code2,
   Crosshair,

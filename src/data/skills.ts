@@ -6,6 +6,34 @@ import type { SkillCategory } from "./types";
 
 export const skillCategories: SkillCategory[] = [
   {
+    // Kept first — this is the headline skill, not just another tool.
+    category: "Built with Claude Code",
+    icon: "Bot",
+    tools: [
+      {
+        name: "Claude Code",
+        blurb:
+          "Building fully functional software by directing AI end-to-end — not just prompting for snippets.",
+      },
+      {
+        name: "Portfolio Website",
+        blurb: "Designed, built, and shipped this entire site using Claude Code.",
+      },
+      {
+        name: "Prospect Research Agent",
+        blurb: "Built an AI agent that automates prospect research for agency outbound.",
+      },
+      {
+        name: "7x GTM CRM",
+        blurb: "Built a custom CRM from scratch to run 7x GTM's internal operations.",
+      },
+      {
+        name: "Video Editing",
+        blurb: "Editing and producing video content using Claude Code.",
+      },
+    ],
+  },
+  {
     category: "List Building & ICP",
     icon: "Crosshair",
     tools: [
@@ -89,6 +117,10 @@ export const skillCategories: SkillCategory[] = [
         name: "n8n",
         blurb: "Visual workflows for anything that needs to run on its own.",
       },
+      {
+        name: "Notion",
+        blurb: "Managing 7x GTM's ops — docs, processes, and internal systems.",
+      },
     ],
   },
   {
@@ -106,6 +138,10 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Spintax",
         blurb: "Variation at scale so every send still feels one-to-one.",
+      },
+      {
+        name: "Canva",
+        blurb: "Creating LinkedIn graphics and content for 7x GTM.",
       },
     ],
   },

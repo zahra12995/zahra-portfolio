@@ -18,6 +18,7 @@ export interface HeroContent {
 }
 
 export type SkillCategoryName =
+  | "Built with Claude Code"
   | "List Building & ICP"
   | "Data Orchestration"
   | "Validation"
