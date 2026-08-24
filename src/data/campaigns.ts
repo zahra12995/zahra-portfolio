@@ -47,18 +47,4 @@ export const campaigns: Campaign[] = [
     ],
     results: ["Add result — e.g. meetings booked, reply rate, pipeline generated"],
   },
-  {
-    id: "linkedin-post-approval-workflow",
-    company: "LinkedIn Post Approval Workflow",
-    type: "Internal Automation",
-    tag: "Automation",
-    accent: "green",
-    whatIDid: [
-      "Designed and built a full LinkedIn content discovery and approval workflow for 7x GTM",
-      "Built daily post discovery and scoring",
-      "Set up Slack notifications and approval tracking for the team",
-      "Automated Google Doc creation with generated post copy",
-    ],
-    results: ["Add result — e.g. meetings booked, reply rate, pipeline generated"],
-  },
 ];
