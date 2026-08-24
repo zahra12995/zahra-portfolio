@@ -7,6 +7,7 @@ export const SECTION_IDS = {
   automation: "automation",
   story: "story",
   bring: "what-i-bring",
+  responsibilities: "what-i-handle-at-7x-gtm",
   contact: "contact",
 } as const;
 

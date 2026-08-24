@@ -124,7 +124,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    category: "Content",
+    category: "Content & Design",
     icon: "PenLine",
     tools: [
       {
@@ -141,7 +141,12 @@ export const skillCategories: SkillCategory[] = [
       },
       {
         name: "Canva",
-        blurb: "Creating LinkedIn graphics and content for 7x GTM.",
+        blurb: "Campaign graphics, brand templates, client decks, LinkedIn visuals.",
+      },
+      {
+        name: "Claude Artifacts",
+        blurb:
+          "Interactive web apps, lead scoring tools, post approval systems, video editors, dashboard builders.",
       },
     ],
   },

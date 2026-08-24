@@ -24,7 +24,7 @@ export type SkillCategoryName =
   | "Validation"
   | "Sequencing"
   | "Automation"
-  | "Content";
+  | "Content & Design";
 
 export interface SkillTool {
   name: string;
