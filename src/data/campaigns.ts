@@ -7,6 +7,19 @@ import type { Campaign } from "./types";
 
 export const campaigns: Campaign[] = [
   {
+    id: "7x-gtm",
+    company: "7x GTM",
+    type: "In-House Outbound — Client Acquisition",
+    tag: "In-House",
+    accent: "purple",
+    whatIDid: [
+      "Owned end-to-end client acquisition for 7x GTM's own outbound",
+      "Built and ran the full system — targeting, copy, infrastructure, sequencing",
+      "Generated exceptional results driving the agency's own growth",
+    ],
+    results: ["Add result — e.g. meetings booked, reply rate, pipeline generated"],
+  },
+  {
     id: "naabu-ai",
     company: "Naabu AI",
     type: "AI Agent Platform",
