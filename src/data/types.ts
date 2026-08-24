@@ -29,6 +29,10 @@ export type SkillCategoryName =
 export interface SkillTool {
   name: string;
   blurb: string;
+  // Optional — used to fetch a logo from Clearbit (logo.clearbit.com/{domain}).
+  // Omit for internal projects or generic skills that have no real logo;
+  // the UI falls back to a colored initials badge automatically.
+  domain?: string;
 }
 
 export interface SkillCategory {

@@ -1,6 +1,9 @@
 /**
  * EDIT THIS FILE to add/remove tools or change category blurbs.
- * Each tool's `blurb` is the one-liner shown in its hover card.
+ * Each tool's `blurb` is the one-liner shown in its hover card. `domain`
+ * (optional) pulls a logo from Clearbit (logo.clearbit.com/{domain}) — leave
+ * it off for internal projects or generic skills; the card falls back to a
+ * colored initials badge automatically.
  */
 import type { SkillCategory } from "./types";
 
@@ -14,6 +17,7 @@ export const skillCategories: SkillCategory[] = [
         name: "Claude Code",
         blurb:
           "Building fully functional software by directing AI end-to-end — not just prompting for snippets.",
+        domain: "anthropic.com",
       },
       {
         name: "Portfolio Website",
@@ -26,6 +30,7 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "7x GTM CRM",
         blurb: "Built a custom CRM from scratch to run 7x GTM's internal operations.",
+        domain: "7xgtm.com",
       },
       {
         name: "Video Editing",
@@ -44,10 +49,12 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Serper.dev",
         blurb: "Real-time search data to enrich signals lists can't see.",
+        domain: "serper.dev",
       },
       {
         name: "Apify",
         blurb: "Scraping the web for the exact data points a campaign needs.",
+        domain: "apify.com",
       },
     ],
   },
@@ -58,14 +65,17 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Clay",
         blurb: "The backbone — where every enrichment and workflow comes together.",
+        domain: "clay.com",
       },
       {
         name: "Prospeo",
         blurb: "Pulling verified emails and phone numbers straight into Clay.",
+        domain: "prospeo.io",
       },
       {
         name: "BetterContact",
         blurb: "Waterfall enrichment to squeeze out contact data others miss.",
+        domain: "bettercontact.rocks",
       },
     ],
   },
@@ -76,10 +86,12 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "MillionVerifier",
         blurb: "Catching invalid emails before they ever hurt deliverability.",
+        domain: "millionverifier.com",
       },
       {
         name: "BounceBan",
         blurb: "A second layer of bounce protection for high-stakes sends.",
+        domain: "bounceban.com",
       },
     ],
   },
@@ -90,14 +102,17 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Smartlead",
         blurb: "Running high-volume cold email sequences that stay out of spam.",
+        domain: "smartlead.ai",
       },
       {
         name: "Instantly",
         blurb: "Managing warm-up and inbox rotation across sending domains.",
+        domain: "instantly.ai",
       },
       {
         name: "HeyReach",
         blurb: "LinkedIn outreach running in parallel with email touches.",
+        domain: "heyreach.io",
       },
     ],
   },
@@ -108,18 +123,22 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Google Apps Script",
         blurb: "Custom scripts that connect Gmail, Sheets, and Clay together.",
+        domain: "google.com",
       },
       {
         name: "Slack Webhooks",
         blurb: "Pushing real-time campaign alerts straight into Slack.",
+        domain: "slack.com",
       },
       {
         name: "n8n",
         blurb: "Visual workflows for anything that needs to run on its own.",
+        domain: "n8n.io",
       },
       {
         name: "Notion",
         blurb: "Managing 7x GTM's ops — docs, processes, and internal systems.",
+        domain: "notion.so",
       },
     ],
   },
@@ -134,6 +153,7 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "LinkedIn Content",
         blurb: "Posts and outreach messaging that build pipeline, not just likes.",
+        domain: "linkedin.com",
       },
       {
         name: "Spintax",
@@ -142,11 +162,13 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Canva",
         blurb: "Campaign graphics, brand templates, client decks, LinkedIn visuals.",
+        domain: "canva.com",
       },
       {
         name: "Claude Artifacts",
         blurb:
           "Interactive web apps, lead scoring tools, post approval systems, video editors, dashboard builders.",
+        domain: "anthropic.com",
       },
     ],
   },
