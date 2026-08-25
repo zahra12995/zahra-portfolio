@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { useScrollTo } from "@/hooks/useScrollTo";
-import { SECTION_IDS } from "@/lib/constants";
+import { HIRE_ME_EVENT, SECTION_IDS } from "@/lib/constants";
 
 const TRIGGER_PHRASE = "hire me";
 
@@ -21,8 +21,18 @@ export function HireMeEasterEgg() {
   const scrollTo = useScrollTo();
 
   useEffect(() => {
-    let buffer = "";
+    const celebrate = () => {
+      setOpen(true);
+      const particleCount = reducedMotion ? 40 : 140;
+      confetti({
+        particleCount,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ["#2dd4bf", "#34d399", "#a855f7"],
+      });
+    };
 
+    let buffer = "";
     const handleKeydown = (event: KeyboardEvent) => {
       if (isEditableTarget(event.target)) return;
       if (event.key.length !== 1) return; // ignore modifier/arrow/etc. keys
@@ -30,19 +40,16 @@ export function HireMeEasterEgg() {
       buffer = (buffer + event.key.toLowerCase()).slice(-TRIGGER_PHRASE.length);
       if (buffer === TRIGGER_PHRASE) {
         buffer = "";
-        setOpen(true);
-        const particleCount = reducedMotion ? 40 : 140;
-        confetti({
-          particleCount,
-          spread: 90,
-          origin: { y: 0.6 },
-          colors: ["#2dd4bf", "#34d399", "#a855f7"],
-        });
+        celebrate();
       }
     };
 
     window.addEventListener("keydown", handleKeydown);
-    return () => window.removeEventListener("keydown", handleKeydown);
+    window.addEventListener(HIRE_ME_EVENT, celebrate);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+      window.removeEventListener(HIRE_ME_EVENT, celebrate);
+    };
   }, [reducedMotion]);
 
   const handleClose = () => setOpen(false);

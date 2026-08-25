@@ -6,7 +6,11 @@ import { useState } from "react";
 import { GradientText } from "@/components/ui/GradientText";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useScrollTo } from "@/hooks/useScrollTo";
-import { NAV_LINKS, SECTION_IDS } from "@/lib/constants";
+import { HIRE_ME_EVENT, NAV_LINKS, SECTION_IDS } from "@/lib/constants";
+
+function triggerHireMe() {
+  window.dispatchEvent(new Event(HIRE_ME_EVENT));
+}
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,7 +45,14 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={triggerHireMe}
+            className="hidden items-center justify-center rounded-full bg-gradient-to-r from-teal-500 via-emerald-500 to-purple-500 px-4 py-2 text-sm font-semibold text-white shadow-md transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:inline-flex"
+          >
+            Hire Me 🎉
+          </button>
           <ThemeToggle />
           <button
             type="button"
@@ -74,6 +85,16 @@ export function Header() {
                   {link.label}
                 </button>
               ))}
+              <button
+                type="button"
+                onClick={() => {
+                  triggerHireMe();
+                  setMenuOpen(false);
+                }}
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 via-emerald-500 to-purple-500 px-4 py-2 text-sm font-semibold text-white shadow-md"
+              >
+                Hire Me 🎉
+              </button>
             </div>
           </motion.nav>
         ) : null}

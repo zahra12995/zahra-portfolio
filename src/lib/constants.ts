@@ -62,3 +62,7 @@ export const CURSOR_MESSAGES: Partial<Record<string, string>> = {
 
 export const CURSOR_IDLE_MESSAGE = "still here...";
 export const CURSOR_IDLE_MS = 3000;
+
+// Custom window event name the visible "Hire Me" button dispatches to
+// trigger the same confetti + modal as typing "hire me" anywhere on the page.
+export const HIRE_ME_EVENT = "trigger-hire-me";
