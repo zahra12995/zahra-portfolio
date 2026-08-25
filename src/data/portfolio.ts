@@ -58,6 +58,6 @@ export const siteMeta: SiteMeta = {
   title: "Zahra — GTM Engineer | 7x GTM",
   description:
     "Former teacher turned GTM Engineer. I build Clay-powered outbound systems that find the right buyers, reach them at the right time, and fill pipelines consistently.",
-  url: "https://zahra-portfolio-gilt.vercel.app",
+  url: "https://zahra-azam-portfolio.vercel.app",
   ogImage: "/og-image.png",
 };

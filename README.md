@@ -70,7 +70,7 @@ Before sharing the live link, replace:
 - [x] **LinkedIn URL** — set to https://www.linkedin.com/in/zahra-azam-7xgtm/
 - [x] **Email** — set to zahra.azam.007@gmail.com
 - [ ] **Campaign results** — `results` array for each campaign in `src/data/campaigns.ts`
-- [x] **Site URL** — set to https://zahra-portfolio-gilt.vercel.app
+- [x] **Site URL** — set to https://zahra-azam-portfolio.vercel.app
 - [ ] **OG image** — add a real `public/og-image.png` (1200×630) for link previews; referenced in `siteMeta.ogImage`
 
 ## Accessibility & performance notes
