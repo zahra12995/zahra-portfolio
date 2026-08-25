@@ -13,6 +13,7 @@ export const timeline: TimelineEntry[] = [
     body: [
       "Prepared lessons, managed 30 students, and built systems for learning — before I knew any of that counted as \"systems thinking.\"",
     ],
+    emoji: "📊",
   },
   {
     id: "the-shift",
@@ -21,6 +22,7 @@ export const timeline: TimelineEntry[] = [
     body: [
       "Nayab and Taimoor at 7x GTM introduced me to GTM engineering. I said yes before I fully understood what Clay was.",
     ],
+    emoji: "💡",
   },
   {
     id: "month-1",
@@ -29,12 +31,14 @@ export const timeline: TimelineEntry[] = [
     body: [
       "Learned Clay, AI Ark, and Smartlead from scratch. Lots of tabs open, lots of \"wait, why did that break.\"",
     ],
+    emoji: "⚡",
   },
   {
     id: "month-3",
     phase: "Month 3",
     heading: "First live campaign",
     body: ["Launched my first live campaign. Nervous, then hooked."],
+    emoji: "🚀",
   },
   {
     id: "month-6",
@@ -43,5 +47,6 @@ export const timeline: TimelineEntry[] = [
     body: [
       "Running full campaign infrastructure for YC-backed clients independently — no more asking \"is this normal?\" every five minutes.",
     ],
+    emoji: "📈",
   },
 ];

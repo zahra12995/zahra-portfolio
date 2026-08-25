@@ -115,6 +115,61 @@ body {
   animation: caret-blink 1s step-end infinite;
 }
 
+@keyframes emoji-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(6px, -14px);
+  }
+  50% {
+    transform: translate(-6px, -4px);
+  }
+  75% {
+    transform: translate(4px, -18px);
+  }
+}
+
+.animate-emoji-float {
+  animation-name: emoji-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes emoji-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-emoji-rotate {
+  animation-name: emoji-rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes emoji-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: var(--emoji-opacity, 0.12);
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: calc(var(--emoji-opacity, 0.12) * 1.6);
+  }
+}
+
+.animate-emoji-pulse {
+  animation-name: emoji-pulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 /* Global kill-switch: anyone who asks for reduced motion gets it, even for
    effects that aren't individually gated by the JS hook. */
 @media (prefers-reduced-motion: reduce) {

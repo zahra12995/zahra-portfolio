@@ -33,6 +33,8 @@ export interface SkillTool {
   // Omit for internal projects or generic skills that have no real logo;
   // the UI falls back to a colored initials badge automatically.
   domain?: string;
+  // Small decorative emoji shown in the card's corner.
+  emoji?: string;
 }
 
 export interface SkillCategory {
@@ -72,6 +74,8 @@ export interface TimelineEntry {
   phase: string;
   heading: string;
   body: string[];
+  // Emoji marker shown on the timeline in place of a plain dot.
+  emoji: string;
 }
 
 export interface BringItem {

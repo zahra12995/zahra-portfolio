@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { GradientBlobBackground } from "@/components/effects/GradientBlobBackground";
+import { HeroFloatingEmojis } from "@/components/effects/HeroFloatingEmojis";
 import { Typewriter } from "@/components/effects/Typewriter";
 import { hero } from "@/data/portfolio";
 import { SECTION_IDS } from "@/lib/constants";
@@ -15,6 +16,7 @@ export function Hero() {
       className="relative flex min-h-[90vh] items-center overflow-hidden px-6 py-24"
     >
       <GradientBlobBackground />
+      <HeroFloatingEmojis />
 
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 text-center">
         <motion.div

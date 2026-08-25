@@ -9,8 +9,16 @@ export function SkillCard({ tool }: { tool: SkillTool }) {
     <motion.div
       whileHover={{ y: -4, scale: 1.02 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="group flex gap-3 rounded-xl border border-surface-border bg-surface p-4 transition-colors hover:border-teal-500/50"
+      className="group relative flex gap-3 rounded-xl border border-surface-border bg-surface p-4 transition-colors hover:border-teal-500/50"
     >
+      {tool.emoji ? (
+        <span
+          aria-hidden
+          className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-background text-sm shadow-sm ring-1 ring-surface-border"
+        >
+          {tool.emoji}
+        </span>
+      ) : null}
       <ToolLogo name={tool.name} domain={tool.domain} />
       <div>
         <p className="font-semibold text-foreground">{tool.name}</p>

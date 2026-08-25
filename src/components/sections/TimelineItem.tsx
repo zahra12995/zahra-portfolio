@@ -11,7 +11,12 @@ export function TimelineItem({
   return (
     <RevealOnScroll as="li" className="relative flex gap-6 pb-10 last:pb-0">
       <div className="flex flex-col items-center">
-        <span className="flex h-3 w-3 shrink-0 rounded-full bg-gradient-to-r from-teal-400 to-purple-500" />
+        <span
+          aria-hidden
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-400 via-emerald-400 to-purple-500 text-base shadow-sm"
+        >
+          {entry.emoji}
+        </span>
         {!isLast ? (
           <span className="mt-2 w-px flex-1 bg-gradient-to-b from-teal-400/40 to-purple-500/10" />
         ) : null}
