@@ -49,3 +49,16 @@ export const ACCENT_CLASSES: Record<
 };
 
 export const BRAND_GRADIENT = "from-teal-400 via-emerald-400 to-purple-500";
+
+// Contextual cursor-follower messages per section. Sections not listed here
+// (Story, What I Bring, What I Handle) simply show no message bubble.
+export const CURSOR_MESSAGES: Partial<Record<string, string>> = {
+  [SECTION_IDS.hero]: "hey there 👋",
+  [SECTION_IDS.skills]: "yes I know all of these",
+  [SECTION_IDS.campaigns]: "these actually worked btw",
+  [SECTION_IDS.automation]: "built this from scratch 🤓",
+  [SECTION_IDS.contact]: "I got you 😎",
+};
+
+export const CURSOR_IDLE_MESSAGE = "still here...";
+export const CURSOR_IDLE_MS = 3000;

@@ -16,6 +16,10 @@ export function SkillsSection() {
           description="The stack I use to turn a raw ICP into a pipeline that actually converts."
         />
 
+        <p className="mt-4 hidden text-center text-xs font-medium text-foreground/40 sm:block">
+          🖱️ drag me — the cards snap right back
+        </p>
+
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
           {skillCategories.map((category, index) => (
             <RevealOnScroll

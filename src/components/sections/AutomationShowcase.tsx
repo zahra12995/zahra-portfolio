@@ -3,6 +3,7 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { Badge } from "@/components/ui/Badge";
 import { automations } from "@/data/automation";
 import { SECTION_IDS } from "@/lib/constants";
+import { AnimatedTerminal } from "./AnimatedTerminal";
 import { FlowDiagram } from "./FlowDiagram";
 
 export function AutomationShowcase() {
@@ -15,7 +16,11 @@ export function AutomationShowcase() {
           description="Infrastructure I've built to take manual work off the team's plate entirely."
         />
 
-        <div className="mt-14 space-y-16">
+        <RevealOnScroll className="mt-14">
+          <AnimatedTerminal />
+        </RevealOnScroll>
+
+        <div className="mt-16 space-y-16">
           {automations.map((automation) => (
             <div key={automation.title}>
               <h3 className="text-xl font-bold sm:text-2xl">{automation.title}</h3>

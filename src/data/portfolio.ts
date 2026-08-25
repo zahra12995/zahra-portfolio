@@ -49,8 +49,7 @@ export const contact: ContactInfo = {
   subheading:
     "Have a pipeline problem or an outbound system that needs building? I'd love to hear about it.",
   linkedinUrl: "https://www.linkedin.com/in/zahra-azam-7xgtm/",
-  // PLACEHOLDER: replace with the real email address.
-  email: "your-email@example.com",
+  email: "zahra.azam.007@gmail.com",
   availabilityNote:
     "Currently open to GTM Engineer and Outbound Specialist roles.",
 };
@@ -59,7 +58,6 @@ export const siteMeta: SiteMeta = {
   title: "Zahra — GTM Engineer | 7x GTM",
   description:
     "Former teacher turned GTM Engineer. I build Clay-powered outbound systems that find the right buyers, reach them at the right time, and fill pipelines consistently.",
-  // PLACEHOLDER: replace with the real production URL once deployed.
-  url: "https://zahra-portfolio.vercel.app",
+  url: "https://zahra-portfolio-gilt.vercel.app",
   ogImage: "/og-image.png",
 };

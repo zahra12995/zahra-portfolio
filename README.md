@@ -68,9 +68,9 @@ Before sharing the live link, replace:
 
 - [x] **Headshot** — `public/headshot.jpg` (already set from the uploaded photo; swap the file to update)
 - [x] **LinkedIn URL** — set to https://www.linkedin.com/in/zahra-azam-7xgtm/
-- [ ] **Email** — `email` in `src/data/portfolio.ts`
+- [x] **Email** — set to zahra.azam.007@gmail.com
 - [ ] **Campaign results** — `results` array for each campaign in `src/data/campaigns.ts`
-- [ ] **Site URL** — `url` in `siteMeta` (`src/data/portfolio.ts`) once you know the final Vercel/custom domain
+- [x] **Site URL** — set to https://zahra-portfolio-gilt.vercel.app
 - [ ] **OG image** — add a real `public/og-image.png` (1200×630) for link previews; referenced in `siteMeta.ogImage`
 
 ## Accessibility & performance notes
