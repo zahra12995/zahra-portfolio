@@ -11,6 +11,10 @@ export function CampaignCard({ campaign }: { campaign: Campaign }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const accent = ACCENT_CLASSES[campaign.accent];
+  // Placeholder results (not filled in yet) shouldn't render at all — an
+  // empty/missing section reads as intentional, a visible "Add result..."
+  // note reads as unfinished.
+  const results = campaign.results.filter((result) => !result.startsWith("Add result"));
 
   return (
     <motion.div
@@ -66,19 +70,20 @@ export function CampaignCard({ campaign }: { campaign: Campaign }) {
                 ))}
               </ul>
 
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-foreground/50">
-                Results
-              </p>
-              <ul className="space-y-1">
-                {campaign.results.map((result) => (
-                  <li
-                    key={result}
-                    className="text-sm italic text-foreground/50"
-                  >
-                    {result}
-                  </li>
-                ))}
-              </ul>
+              {results.length > 0 ? (
+                <>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-foreground/50">
+                    Results
+                  </p>
+                  <ul className="space-y-1">
+                    {results.map((result) => (
+                      <li key={result} className="text-sm italic text-foreground/50">
+                        {result}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
             </div>
           </motion.div>
         ) : null}
