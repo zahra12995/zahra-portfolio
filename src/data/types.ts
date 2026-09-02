@@ -30,9 +30,13 @@ export interface SkillTool {
   name: string;
   blurb: string;
   // Optional — used to fetch a logo from Clearbit (logo.clearbit.com/{domain}).
-  // Omit for internal projects or generic skills that have no real logo;
-  // the UI falls back to a colored initials badge automatically.
+  // Ignored when `logoSrc` is set. Omit both for internal projects or
+  // generic skills that have no real logo; the UI falls back to a colored
+  // initials badge automatically.
   domain?: string;
+  // Optional — a local logo file under /public (e.g. "/logos/clay.jpg").
+  // Takes priority over `domain` when both are present.
+  logoSrc?: string;
   // Small decorative emoji shown in the card's corner.
   emoji?: string;
 }

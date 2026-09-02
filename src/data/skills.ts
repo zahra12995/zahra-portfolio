@@ -1,9 +1,11 @@
 /**
  * EDIT THIS FILE to add/remove tools or change category blurbs.
- * Each tool's `blurb` is the one-liner shown in its hover card. `domain`
- * (optional) pulls a logo from Clearbit (logo.clearbit.com/{domain}) — leave
- * it off for internal projects or generic skills; the card falls back to a
- * colored initials badge automatically. `emoji` is the small corner accent.
+ * Each tool's `blurb` is the one-liner shown in its hover card. `logoSrc`
+ * (optional) points at an uploaded logo in /public/logos — takes priority
+ * over `domain`, which instead pulls a logo from Clearbit
+ * (logo.clearbit.com/{domain}). Leave both off for internal projects or
+ * generic skills; the card falls back to a colored initials badge
+ * automatically. `emoji` is the small corner accent.
  */
 import type { SkillCategory } from "./types";
 
@@ -17,7 +19,7 @@ export const skillCategories: SkillCategory[] = [
         name: "Claude Code",
         blurb:
           "Building fully functional software by directing AI end-to-end — not just prompting for snippets.",
-        domain: "anthropic.com",
+        logoSrc: "/logos/claude-code.png",
         emoji: "🤖",
       },
       {
@@ -50,18 +52,19 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "AI Ark",
         blurb: "Finding and scoring accounts that actually match the ICP.",
+        logoSrc: "/logos/aiark.jpg",
         emoji: "🎯",
       },
       {
         name: "Serper.dev",
         blurb: "Real-time search data to enrich signals lists can't see.",
-        domain: "serper.dev",
+        logoSrc: "/logos/serper.webp",
         emoji: "📈",
       },
       {
         name: "Apify",
         blurb: "Scraping the web for the exact data points a campaign needs.",
-        domain: "apify.com",
+        logoSrc: "/logos/apify.png",
         emoji: "🤖",
       },
     ],
@@ -73,13 +76,13 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Clay",
         blurb: "The backbone — where every enrichment and workflow comes together.",
-        domain: "clay.com",
+        logoSrc: "/logos/clay.jpg",
         emoji: "⚡",
       },
       {
         name: "Prospeo",
         blurb: "Pulling verified emails and phone numbers straight into Clay.",
-        domain: "prospeo.io",
+        logoSrc: "/logos/prospeo.jpg",
         emoji: "📧",
       },
       {
@@ -115,19 +118,19 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Smartlead",
         blurb: "Running high-volume cold email sequences that stay out of spam.",
-        domain: "smartlead.ai",
+        logoSrc: "/logos/smartlead.png",
         emoji: "📧",
       },
       {
         name: "Instantly",
         blurb: "Managing warm-up and inbox rotation across sending domains.",
-        domain: "instantly.ai",
+        logoSrc: "/logos/instantly.png",
         emoji: "⚡",
       },
       {
         name: "HeyReach",
         blurb: "LinkedIn outreach running in parallel with email touches.",
-        domain: "heyreach.io",
+        logoSrc: "/logos/heyreach.png",
         emoji: "💌",
       },
     ],
@@ -192,7 +195,7 @@ export const skillCategories: SkillCategory[] = [
         name: "Claude Artifacts",
         blurb:
           "Interactive web apps, lead scoring tools, post approval systems, video editors, dashboard builders.",
-        domain: "anthropic.com",
+        logoSrc: "/logos/claude.png",
         emoji: "🚀",
       },
     ],

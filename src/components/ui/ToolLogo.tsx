@@ -13,28 +13,49 @@ function initials(name: string) {
     .toUpperCase();
 }
 
-// Tries Clearbit's logo API (logo.clearbit.com/{domain}) and falls back to a
-// colored initials badge if there's no domain, the logo fails to load, or it
+// Local logo (uploaded to public/logos) takes priority when present — no
+// network dependency, so it just renders directly. Otherwise falls back to
+// Clearbit's logo API (logo.clearbit.com/{domain}), and finally to a colored
+// initials badge if there's no domain either, the logo fails to load, or it
 // simply hasn't resolved within a few seconds (a bounded safety net so a
 // slow/hanging request never leaves a broken-image icon on screen).
 export function ToolLogo({
   name,
   domain,
+  logoSrc,
   className,
 }: {
   name: string;
   domain?: string;
+  logoSrc?: string;
   className?: string;
 }) {
   const [status, setStatus] = useState<"loading" | "loaded" | "failed">(
-    domain ? "loading" : "failed"
+    domain && !logoSrc ? "loading" : "failed"
   );
 
   useEffect(() => {
-    if (!domain || status !== "loading") return;
+    if (!domain || logoSrc || status !== "loading") return;
     const timeout = setTimeout(() => setStatus((s) => (s === "loading" ? "failed" : s)), 4000);
     return () => clearTimeout(timeout);
-  }, [domain, status]);
+  }, [domain, logoSrc, status]);
+
+  if (logoSrc) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={logoSrc}
+        alt=""
+        width={36}
+        height={36}
+        className={clsx(
+          "h-9 w-9 shrink-0 rounded-lg bg-white object-contain p-1 ring-1 ring-surface-border",
+          className
+        )}
+        aria-hidden
+      />
+    );
+  }
 
   if (status === "failed") {
     return (

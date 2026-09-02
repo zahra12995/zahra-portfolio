@@ -29,7 +29,7 @@ export function SkillCard({ tool }: { tool: SkillTool }) {
           {tool.emoji}
         </span>
       ) : null}
-      <ToolLogo name={tool.name} domain={tool.domain} />
+      <ToolLogo name={tool.name} domain={tool.domain} logoSrc={tool.logoSrc} />
       <div>
         <p className="font-semibold text-foreground">{tool.name}</p>
         <p className="mt-1 text-sm text-foreground/60 transition-colors group-hover:text-foreground/80">
